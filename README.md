@@ -1,4 +1,5 @@
 # Traffic Light Intersection Controller
+<img width="1366" height="544" alt="Final project" src="https://github.com/user-attachments/assets/d54b64db-c04b-4715-a9be-d19fe73bc2c9" />
 
 ## Project Overview
 This project simulates a fully functional, two-way traffic intersection utilizing an Arduino microcontroller. Written in C++, the system employs Object-Oriented Programming (OOP) concepts to manage the state of the traffic lights and includes an active serial-polling mechanism for real-time emergency vehicle overrides. 
