@@ -42,7 +42,7 @@ Instead of relying on standard blocking `delay()` functions, the project utilize
 * **Command `2`:** Immediately forces the East light to Green and the North light to Red for 5 seconds, accommodating Eastbound emergency vehicles.
 
 ## Setup and Installation
-1. Assemble the hardware components according to the wiring diagram in Final project.png[cite: 1].
+1. Assemble the hardware components according to the wiring diagram in Final project.png.
 2. Open the source file in the Arduino IDE.
 3. Select the correct board and COM port from the Tools menu.
 4. Upload the code to the Arduino.
