@@ -62,17 +62,14 @@ Intersection intersection = Intersection(north, east);
 
 void smartWait(int waitTime) {
   for (int i = 0; i < waitTime; i = i + 10) {
-    
-    // While waiting, take a quick peek at the keyboard
     if (Serial.available() > 0) {
       char key = Serial.read();
-      
       if (key == '1') {
         // EMERGENCY NORTH!
         north.turnGreen();
         east.turnRed();
-        delay(5000); // Freeze in emergency for 5 seconds
-        return;      // Exit the wait early and restart the main loop
+        delay(5000); 
+        return;      
       } 
       else if (key == '2') {
         // EMERGENCY EAST!
