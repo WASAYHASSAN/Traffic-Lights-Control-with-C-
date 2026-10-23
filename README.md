@@ -4,14 +4,14 @@
 This project simulates a fully functional, two-way traffic intersection utilizing an Arduino microcontroller. Written in C++, the system employs Object-Oriented Programming (OOP) concepts to manage the state of the traffic lights and includes an active serial-polling mechanism for real-time emergency vehicle overrides. 
 
 ## Hardware Configuration
-The circuit design requires standard prototyping components. For a complete visual layout of the wiring, please reference the included Final project.png file[cite: 1].
+The circuit design requires standard prototyping components. For a complete visual layout of the wiring, please reference the included Final project.png file.
 
 ### Components Required
-* 1x Arduino Uno (or compatible microcontroller)[cite: 1]
-* 1x Prototyping Breadboard[cite: 1]
-* 6x LEDs (2 Red, 2 Yellow, 2 Green)[cite: 1]
-* 6x Current-limiting Resistors[cite: 1]
-* Jumper wires[cite: 1]
+* 1x Arduino Uno (or compatible microcontroller)
+* 1x Prototyping Breadboard
+* 6x LEDs (2 Red, 2 Yellow, 2 Green)
+* 6x Current-limiting Resistors
+* Jumper wires
 
 ### Pin Mapping
 * **North Intersection:** 
