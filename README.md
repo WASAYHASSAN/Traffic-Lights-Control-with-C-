@@ -1,29 +1,22 @@
-# 🚦 Traffic Lights Control System
+# Smart Traffic Light Intersection Controller
 
-A simple, C++ based traffic light controller built and simulated using Arduino on Tinkercad. This project demonstrates basic hardware-software integration, utilizing GPIO pins to sequence standard traffic light operations.
+This project is an Arduino-based traffic light simulation for a two-way intersection (North and East). It is programmed in C++ using Object-Oriented Programming (OOP) principles to manage the states of the traffic lights and includes a serial-based emergency override system.
 
-## 🛠️ Components Used
-* **Microcontroller:** Arduino Uno R3 (or compatible)
-* **Actuators:** 3x LEDs (Red, Yellow, Green)
-* **Passives:** 3x Resistors (220Ω or 330Ω)
-* **Prototyping:** Breadboard & Jumper Wires
+## Hardware Configuration
+The physical wiring and component layout are documented in the Final project.png file[cite: 1]. The required components include:
+* Arduino Uno microcontroller[cite: 1]
+* 1 Breadboard[cite: 1]
+* 6 LEDs (2 Red, 2 Yellow, 2 Green)[cite: 1]
+* 6 Resistors[cite: 1]
+* Jumper wires connecting the components to the Arduino digital pins[cite: 1]
 
-## ⚙️ How It Works
-The C++ code controls the digital output pins of the Arduino to simulate a real-world traffic light sequence using precise timing delays:
-1. **Red Light (Stop):** Holds for a set duration.
-2. **Green Light (Go):** Activates after Red.
-3. **Yellow Light (Yield):** Activates briefly after Green to signal the upcoming stop.
-4. **Loop:** The cycle repeats continuously.
+### Pin Mapping
+* **North Light:** Red (Pin 12), Yellow (Pin 10), Green (Pin 8)
+* **East Light:** Red (Pin 7), Yellow (Pin 6), Green (Pin 5)
 
-## 🔗 Live Simulation
-You can view the circuit wiring and run the live code simulation directly in your browser:  
-👉 **[View & Run on Tinkercad](https://www.tinkercad.com/things/6SpF4AH6d0Q-traffic-lights-control?sharecode=Al-fUTIWk6LwjJrG20F51QonmTxn817v12DaXfcZ6UM)**
-
-## 🚀 How to Run Locally
-1. Clone this repository.
-2. Open the `.ino` / `.cpp` file in the **Arduino IDE**.
-3. Wire the physical components according to the Tinkercad schematic.
-4. Connect your Arduino via USB and hit **Upload**.
-
----
-*Created by [Your Name/GitHub Handle]*
+## Features
+* **Object-Oriented Design:** Utilizes `TrafficLight` and `Intersection` classes to encapsulate pin management and light behaviors cleanly.
+* **Standard Traffic Cycle:** Automatically alternates through Green, Yellow, and Red phases for both directions.
+* **Emergency Override System:** Implements a custom `smartWait` function that continuously polls the Serial Monitor (9600 baud) during active delays.
+  * Sending `1` overrides the sequence, forcing the North light to Green and East light to Red for 5 seconds.
+  * Sending `2` overrides the sequence, forcing the North light to Red and East light to Green for 5 seconds.
